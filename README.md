@@ -47,13 +47,7 @@ pip install -r requirements.txt
 ```
 
 4. Download YOLO Model:
-```bash
-# Option 1: Using ultralytics CLI
-yolo checks
-
-# Option 2: Manual download
-# Download yolov8s-seg.pt from: https://github.com/ultralytics/assets/releases
-```
+Model will be downloaded at run-time as needed.
 
 ## Usage
 
