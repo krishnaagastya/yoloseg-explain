@@ -73,7 +73,6 @@ python src/yoloseg_visualizer.py --image path/to/image.jpg --target_class "refri
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-```
 
 # Test Image
 ![Test Image](test_data/books-1.jpg "Test Image")
