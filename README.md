@@ -1,4 +1,5 @@
 # YOLO Segmentation Visualization Tool
+This will work only with Yolov8-Segmentation models currently.
 
 ## Project Structure
 ```
@@ -69,7 +70,7 @@ python src/yolo_seg_working.py --image path/to/image.jpg --target_class "refrige
 
 ## Troubleshooting
 - Ensure CUDA is properly installed for GPU acceleration
-- Check that your YOLO model is compatible with the script
+- Check that your YOLO model is compatible with the script. Only SEGMENTATION MODELS will work now.
 - Verify image path and class names
 
 ## Contributing
@@ -90,108 +91,3 @@ numpy>=1.24.3
 opencv-python>=4.7.0.72
 argparse>=1.4.0
 ```
-
-## .gitignore
-```
-# Virtual Environment
-venv/
-.env
-*.venv
-.venv/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Model Files
-*.pt
-*.weights
-
-# IDE
-.vscode/
-.idea/
-
-# Outputs
-output/
-*.png
-*.jpg
-
-# Logs
-*.log
-
-# OS Generated
-.DS_Store
-Thumbs.db
-```
-
-## Additional Recommendations
-
-### Docker Support (Optional)
-If you want to add Docker support, here's a sample Dockerfile:
-
-<antArtifact identifier="dockerfile" type="application/vnd.ant.code" language="dockerfile" title="Dockerfile for YOLO Segmentation Visualizer">
-# Use an official Python runtime as a parent image
-FROM python:3.9-slim-buster
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0
-
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME YOLOSegmentationVisualizer
-
-# Run script when the container launches
-CMD ["python", "src/yolo_seg_working.py"]
-```
-
-### GitHub Actions CI/CD (Optional)
-Create a `.github/workflows/python-app.yml`:
-
-<antArtifact identifier="github-actions" type="application/vnd.ant.code" language="yaml" title="GitHub Actions Workflow">
-name: Python application
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.9"
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    
-    # Add more steps like testing if you have test cases
