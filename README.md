@@ -77,6 +77,7 @@ python src/yoloseg_visualizer.py --image path/to/image.jpg --target_class "refri
 
 # Test Image
 ![Test Image](test_data/books-1.jpg "Test Image")
+<img src="test_data/books-1.jpg" alt="Test Image" width="500"/>
 
 # Results on Test image
 ![Results on Test Image](test_data/books-1.jpg "Results on Test Image")
