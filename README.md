@@ -53,7 +53,7 @@ Model will be downloaded at run-time as needed.
 
 ### Basic Visualization
 ```bash
-python src/yolo_seg_working.py --image path/to/image.jpg --target_class "refrigerator" --model yolov8s-seg.pt --mode explain
+python src/yoloseg_visualizer.py --image path/to/image.jpg --target_class "refrigerator" --model yolov8s-seg.pt --mode explain
 ```
 
 ### Command Line Arguments
@@ -64,7 +64,7 @@ python src/yolo_seg_working.py --image path/to/image.jpg --target_class "refrige
 
 ## Troubleshooting
 - Ensure CUDA is properly installed for GPU acceleration
-- Check that your YOLO model is compatible with the script. Only SEGMENTATION MODELS will work now.
+- Check that your YOLO model is compatible with the script. Only SEGMENTATION MODELS can be analyzed.
 - Verify image path and class names
 
 ## Contributing
@@ -75,13 +75,13 @@ python src/yolo_seg_working.py --image path/to/image.jpg --target_class "refrige
 5. Open a Pull Request
 ```
 
-## requirements.txt
+## Dependencies
 ```
-ultralytics==8.0.210
-matplotlib>=3.7.1
-torch>=1.13.1
-torchvision>=0.14.1
-numpy>=1.24.3
-opencv-python>=4.7.0.72
-argparse>=1.4.0
+ultralytics
+matplotlib
+torch
+torchvision
+numpy
+opencv-python
+argparse
 ```
