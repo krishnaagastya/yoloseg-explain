@@ -31,8 +31,8 @@ This tool provides advanced visualization and explanation capabilities for YOLO 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/yolosegm-explain.git
-cd yolosegm-explain
+git clone https://github.com/yourusername/yoloseg-explain.git
+cd yoloseg-explain
 ```
 
 2. Create a virtual environment:
