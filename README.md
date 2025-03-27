@@ -75,12 +75,5 @@ python src/yoloseg_visualizer.py --image path/to/image.jpg --target_class "refri
 5. Open a Pull Request
 ```
 
-## Dependencies
-```
-ultralytics
-matplotlib
-torch
-numpy
-opencv-python
-argparse
-```
+# Test Image
+
