@@ -2,17 +2,17 @@
 
 ## Project Structure
 ```
-yolo-segmentation-visualizer/
+yolosegm-explain/
 │
 ├── src/
-│   └── yolo_seg_working.py
+│   └── yoloseq_visualizer.py
 │
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
 │
-└── tests/
-    └── sample_images/
+└── test_data/
+    └── books-1.jpg
 ```
 
 ## README.md
@@ -30,8 +30,8 @@ This tool provides advanced visualization and explanation capabilities for YOLO 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/yolo-segmentation-visualizer.git
-cd yolo-segmentation-visualizer
+git clone https://github.com/yourusername/yolosegm-explain.git
+cd yolosegm-explain
 ```
 
 2. Create a virtual environment:
