@@ -80,7 +80,6 @@ python src/yoloseg_visualizer.py --image path/to/image.jpg --target_class "refri
 ultralytics
 matplotlib
 torch
-torchvision
 numpy
 opencv-python
 argparse
